@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+
+</head>
+<body>
+    <div class="jumbotron bg-dark text-white text-center">
+        <h1>Adivina el número</h1>
+        <p>www.bonasai777.com</p>
+    </div>
+    <div class="container w-50 p-3 my-3 border shadow">
+        <div class="w-75 mx-auto text-info">
+            <p>Tienes 10 intentos para adivinar el número entre 1 y 100.</p>
+        </div>
+        <div id="formulario" class="w-75 mx-auto">
+            <div class="mb-3 form-group">
+                <label for="guessField">Ingrese un intento: </label>
+                <input type="text" id="guessField" class="guessField form-control"> 
+            </div>
+            <input type="submit" value="Enviar intento" class="guessSubmit btn btn-outline-secondary">
+        </div>
+
+        <div class="resultParas w-75 mx-auto">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi text-info"></p>
+        </div>
+
+    </div>
+
+    <script src="adivina.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
