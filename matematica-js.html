@@ -24,6 +24,12 @@
                 <p id="resultado3"></p>
             </div>
         </div>
+        <div class="row justify-content-center m-3 p-2">
+            <div class="col-sm-8">
+                <button id="boton" class="btn btn-outline-dark">Start machine</button>
+                <p id="estado-maquina">The machine is stopped</p>
+            </div>
+        </div>
     </div>
 
 <script>
@@ -31,10 +37,29 @@
     let myFloat = 3.1415984;
     const piNumber = 3.141592653589793;
 
+    const btn = document.querySelector('#boton');
+    const txt = document.querySelector('#estado-maquina');
+
     document.getElementById('resultado1').innerHTML = 'myInt: ' + myInt + ', myfloat: ' + myFloat;
     document.getElementById('resultado2').innerHTML = 'typeof(myInt): ' + typeof(myInt) + '</br>typeof(myfloat): ' + typeof(myFloat);
     document.getElementById('resultado3').innerHTML = 'Pi: ' + piNumber + '</br> Pi(4 decimales): ' + piNumber.toFixed(4);
     
+    btn.addEventListener('click', updateBtn);
+
+    function updateBtn ()
+    {
+        if (btn.textContent === 'Start machine')
+        {
+            btn.textContent = 'Stop machine';
+            txt.textContent = 'The machine has started!';
+        }
+        else
+        {
+            btn.textContent = 'Start machine';
+            txt.textContent = 'The machine is stopped';
+        }
+    }
+
 </script>
 
 </body>
