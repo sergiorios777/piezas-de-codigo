@@ -1,25 +1,29 @@
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
+const storyTitle = document.querySelector('.card-title');
+const cardElement = document.querySelector('.card');
 
-let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+cardElement.hidden = true;
+
+let storyText = 'Había 94 grados fahrenheit afuera, pero :insertx: salió a caminar. Cuando llegó a :inserty:, lo miraron horrorizados por un momento, entonces :insertz:. Bob lo vio todo, pero no se sorprendió — :insertx: pesaba 300 libras, y era un día caluroso.';
 
 let insertX = [
-  'Willy the Goblin',
-  'Big Daddy',
-  'Father Christmas'
+  'Willy el Duende',
+  'Gran Pa\'',
+  'Papá Navidad'
 ];
 
 let insertY =[
-  'the soup kitchen',
-  'Disneyland',
-  'the White House'
+  'el comedor de beneficiencia',
+  'Disneylandia',
+  'la Casa Blanca'
 ];
 
 let insertZ = [
-  'spontaneously combusted',
-  'melted into a puddle on the sidewalk',
-  'turned into a slug and crawled away'
+  'ardió espontáneamente',
+  'se derretido en un charco en la acera',
+  'se convirtió en una babosa y se arrastró lejos'
 ];
 
 randomize.addEventListener('click', result);
@@ -34,7 +38,7 @@ function result()
 {
   let newStory = storyText;
   console.log(newStory);
-  
+
   let xItem = randomValueFromArray(insertX);
   let yItem = randomValueFromArray(insertY);
   let zItem = randomValueFromArray(insertZ);
@@ -50,17 +54,23 @@ function result()
   {
     let name = customName.value;
     newStory = newStory.replace(/Bob/g, name);
-    console.log(newStory);
   }
 
   if(document.getElementById("uk").checked) 
   {
-    let weight = Math.round(300/14) + ' stone';
-    let temperature =  Math.round(5/9*(94-32)) + ' centigrade';
-    newStory = newStory.replace('300 pounds', weight);
-    newStory = newStory.replace('94 fahrenheit', temperature);
+    let weight = Math.round(300/2.2046) + ' kilogramos';
+    let temperature =  Math.round(5/9*(94-32)) + ' centígrados';
+    console.log(newStory);
+    console.log(weight + '-' + temperature);
+    newStory = newStory.replace('300 libras', weight);
+    newStory = newStory.replace('94 grados fahrenheit', temperature);
   }
 
+  storyTitle.textContent = xItem + ' salió a caminar';
   story.textContent = newStory;
   story.style.visibility = 'visible';
+  if (cardElement.hidden)
+  {
+    cardElement.hidden = false;
+  }
 }
