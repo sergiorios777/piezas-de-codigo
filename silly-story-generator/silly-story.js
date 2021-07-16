@@ -37,13 +37,13 @@ function randomValueFromArray(array)
 function result() 
 {
   let newStory = storyText;
-  console.log(newStory);
+  //console.log(newStory);
 
   let xItem = randomValueFromArray(insertX);
   let yItem = randomValueFromArray(insertY);
   let zItem = randomValueFromArray(insertZ);
 
-  console.log(xItem+'-'+yItem+'-'+zItem);
+  //console.log(xItem+'-'+yItem+'-'+zItem);
 
   newStory = newStory.replace(/:insertx:/g, xItem);
   newStory = newStory.replace(/:inserty:/g, yItem);
