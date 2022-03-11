@@ -70,7 +70,7 @@ function setGameOver()
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
     resetButton.textContent = 'Iniciar nueva partida';
-    resetButton.className = "btn btn-outline-info";
+    resetButton.className = "btn";
     //document.body.append(resetButton);
     document.getElementById("formulario").append(resetButton);
     resetButton.addEventListener('click', resetGame);
@@ -94,7 +94,7 @@ function resetGame()
     guessField.focus();
 
     //lastResult.style.backgroundColor = 'white';
-    lastResult.className = 'lastResult p-2 d-block bg-transparent text-white'
+    lastResult.className = 'lastResult'
 
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
