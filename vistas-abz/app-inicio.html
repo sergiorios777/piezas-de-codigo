@@ -14,23 +14,23 @@
 <body>
     <div class="container">
         <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">ABZ Store</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-                </ul>
-            </div>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">ABZ Store</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="sass.html">Sass</a></li>
+              <li><a href="badges.html">Components</a></li>
+              <li><a href="collapsible.html">Javascript</a></li>
+              <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+          </div>
         </nav>
         
         <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
         </ul>
 
         <div class="row">
@@ -54,38 +54,93 @@
         </div>
 
         <div class="row">
-            <div class="s12">
-                <h1>Gastos</h1>
-                <table class="responsive-table highlight"> 
-                    <thead>
-                      <tr>
-                          <th>Fecha</th>
-                          <th>Proveedor</th>
-                          <th>Gasto S/</th>
-                      </tr>
-                    </thead>
-            
-                    <tbody>
-                      <tr>
-                        <td>11/03/2022</td>
-                        <td>Axel Import ERIL</td>
-                        <td>2,136.00</td>
-                      </tr>
-                      <tr>
-                        <td>10/03/2022</td>
-                        <td>Textiles Guacamayo SAC</td>
-                        <td>1,465.00</td>
-                      </tr>
-                      <tr>
-                        <td>09/03/2022</td>
-                        <td>Mercado Central EIRL</td>
-                        <td>2,236.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div class="s12 l6">
+              <table class="highlight">
+                <caption>Gastos</caption> 
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th class="hide-on-small-only">RUC</th>
+                    <th>Proveedor</th>
+                    <th class="hide-on-med-and-down">Detalle</th>
+                    <th colspan="2">Gasto S/</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <td>11/03/2022</td>
+                    <td class="hide-on-small-only">20506689514</td>
+                    <td>Axel Import ERIL</td>
+                    <td class="hide-on-med-and-down">Por la compra de 27 carteras variadas.</td>
+                    <td>2,136.00</td>
+                    <td>
+                      <a href="#modal1" class="modal-trigger"><i class="material-icons">search</i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10/03/2022</td>
+                    <td class="hide-on-small-only">20212568497</td>
+                    <td>Textiles Guacamayo SAC</td>
+                    <td class="hide-on-med-and-down">Por la compra de 14 pares de zapatos de hombre.</td>
+                    <td>1,465.00</td>
+                    <td><span><i class="material-icons">search</i></span></td>
+                  </tr>
+                  <tr>
+                    <td>09/03/2022</td>
+                    <td class="hide-on-small-only">2036985478</td>
+                    <td>Mercado Central EIRL</td>
+                    <td class="hide-on-med-and-down">Por la compra de 15 blazer de mujer.</td>
+                    <td>2,236.00</td>
+                    <td><span><i class="material-icons">search</i></span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#!">Ver todos los gastos</a>
             </div>
         </div>
-
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <table>
+              <caption>Gasto:</caption>
+              <tr>
+                <th scope="row">Fecha:</th>
+                <td>11/03/2022</td>
+              </tr>
+              <tr>
+                <th scope="row">RUC:</th>
+                <td>20506689514</td>
+              </tr>
+              <tr>
+                <th scope="row">Proveedor:</th>
+                <td>Axel Import ERIL</td>
+              </tr>
+              <tr>
+                <th scope="row">Detalle:</th>
+                <td>Por la compra de 27 carteras variadas.</td>
+              </tr>
+              <tr>
+                <th scope="row">Factura Nº:</th>
+                <td>FE020-25163</td>
+              </tr>
+              <tr>
+                <th scope="row">Monto S/:</th>
+                <td>1,810.17</td>
+              </tr>
+              <tr>
+                <th scope="row">IGV S/:</th>
+                <td>325.83</td>
+              </tr>
+              <tr>
+                <th scope="row">Monto total S/:</th>
+                <td>2,136.00</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+          </div>
+        </div>
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
@@ -118,6 +173,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
+
+            var elems2 = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems2);
         });
     </script>
 </body>
