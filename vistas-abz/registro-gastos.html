@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" prefers-color-scheme: dark>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de gastos</title>
+
+    <!--CDN Pico Css-->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+  <nav class="container">
+    <ul>
+      <li><strong>ABZ Store</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#" class="secondary">Inicio</a></li>
+      <li><a href="#!" class="secondary">Gastos</a></li>
+      <li><a href="#!" class="secondary">Ventas</a></li>
+      <li><a href="#!" class="secondary">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <h1>Registro de gastos</h1>  
+    <form>
+
+        <!-- Grid -->
+        <div class="grid">
+      
+          <!-- Markup example 1: input is inside label -->
+          <label for="ruc">
+            RUC del proveedor:
+            <input type="tel" id="ruc" name="ruc" placeholder="11 dígitos" pattern="[0-9]{11}"/>
+          </label>
+      
+          <label for="proveedor">
+            Razón social:
+            <input type="text" id="proveedor" name="proveedor" placeholder="Razón social" minlength="4" maxlength="255"/>
+          </label>
+      
+        </div>
+        <div class="grid">
+          <label for="email">Correo:
+            <input type="email" id="email" name="email" placeholder="Correo electrónico">
+          </label>
+          <label for="direccion">Dirección:
+            <input type="text" id="direccion" name="direccion" placeholder="Calle Ficticia N° 555">
+          </label>
+        </div>
+
+        <label for="tipodegasto">Tipo de gasto:</label>
+        <select id="tipodegasto" required>
+          <option value="0" selected>(Seleccionar)</option>
+          <option value="1">Compra de mercadería</option>
+          <option value="2">Transporte de carga, fletes y manipuleo</option>
+          <option value="3">Pasajes aéreos</option>
+          <option value="4">Pasajes terrestres</option>
+          <option value="5">Otros</option>
+        </select>
+
+        <label for="detalle">Detalle del gasto:
+          <input type="text" id="detalle" name="detalle" placeholder="Indicar el concepto del gasto">
+        </label>
+        <div class="grid">
+          <label for="email">Comprobante de pago N°:
+            <input type="text" id="comprobante" name="comprobante" placeholder="Fact. N° ### ###">
+          </label>
+          <label for="monto">Monto S/:
+            <input type="text" id="monto" name="monto" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="1,000,000.00" data-type="currency"/>
+          </label>
+          <label for="igv">IGV S/:
+            <input type="text" id="igv" name="igv" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="180,000.00"/>
+          </label>
+          <label for="total">Total S/:
+            <input type="text" id="total" name="total" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="1,180,000.00"/>
+          </label>
+        </div>
+        <small>We'll never share your email with anyone else.</small>
+        <!-- Button -->
+        <button type="submit">Submit</button>
+      
+      </form>
+  </main>
+  <!--Javascripts-->
+  <script src="currency-format.js"></script>
+</body>
+</html>
