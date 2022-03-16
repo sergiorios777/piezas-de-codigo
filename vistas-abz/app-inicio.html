@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,9 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Icons Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Hoja de estilos propio -->
     <link rel="stylesheet" href="estilos.css">
 
 </head>
@@ -34,29 +36,25 @@
   </ul>
     <div class="container">
         <div class="row">
-            <div class="card">
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-tabs">
-                  <ul class="tabs tabs-fixed-width">
-                    <li class="tab"><a href="#test4">Test 1</a></li>
-                    <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-                    <li class="tab"><a href="#test6">Test 3</a></li>
-                  </ul>
-                </div>
-                <div class="card-content grey lighten-4">
-                  <div id="test4">Test 1</div>
-                  <div id="test5">Test 2</div>
-                  <div id="test6">Test 3</div>
-                </div>
+          <div class="col s12 m12 l12">
+            <div class="micaja blue-grey darken-1">
+              <div class="white-text">
+                <span class="micaja-titulo">Registro de gastos y ventas</span>
+                <p>Puede registrar los gastos y ventas realizados, en las secciones correspondientes.
+                  Se pueden observar las últimas cinco operaciones de cada una de ellas en los cuadros de abajo.</p>
+              </div>
+              <div class="micaja-accion">
+                <a href="#">Registrar gastos</a>
+                <a href="#">Registrar ventas</a>
+              </div>
             </div>
+          </div>
         </div>
-
+        <div class="divider"></div>
         <div class="row">
-            <div class="s12 l6">
+            <div class="col s12 m12 l10 offset-l1">
               <table class="highlight">
-                <caption>Gastos <br>
+                <caption class="red-text text-darken-1">Gastos <br>
                   <span>El cuadro muestra los últimos cinco registros de gastos.</span>
                 </caption> 
                 <thead>
@@ -102,9 +100,9 @@
             </div>
         </div>
         <div class="row">
-          <div class="s12 l6">
+          <div class="col s12 m12 l10 offset-l1">
             <table class="highlight">
-              <caption>Ventas <br>
+              <caption class="blue-text text-darken-3">Ventas <br>
                 <span>El cuadro muestra los últimos cinco registros de ventas.</span>
               </caption> 
               <thead>
@@ -149,6 +147,48 @@
             <a href="#!">Ver todas las ventas</a>
           </div>
       </div>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <table>
+            <caption>Detalles del gasto:</caption>
+            <tr>
+              <th scope="row">Fecha:</th>
+              <td>11/03/2022</td>
+            </tr>
+            <tr>
+              <th scope="row">RUC:</th>
+              <td>20506689514</td>
+            </tr>
+            <tr>
+              <th scope="row">Proveedor:</th>
+              <td>Axel Import ERIL</td>
+            </tr>
+            <tr>
+              <th scope="row">Detalle:</th>
+              <td>Por la compra de 27 carteras variadas.</td>
+            </tr>
+            <tr>
+              <th scope="row">Comprobante Nº:</th>
+              <td>FACT. F023-11517</td>
+            </tr>
+            <tr>
+              <th scope="row">Monto S/:</th>
+              <td>1,810.17</td>
+            </tr>
+            <tr>
+              <th scope="row">IGV S/:</th>
+              <td>325.83</td>
+            </tr>
+            <tr>
+              <th scope="row">Monto total S/:</th>
+              <td>2,136.00</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+      </div>
         <div id="modal2" class="modal">
           <div class="modal-content">
             <table>
@@ -170,7 +210,7 @@
                 <td>Venta de una cartera de mujer.</td>
               </tr>
               <tr>
-                <th scope="row">Factura Nº:</th>
+                <th scope="row">Comprobante Nº:</th>
                 <td>BV023-17</td>
               </tr>
               <tr>
@@ -191,6 +231,19 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
           </div>
         </div>
+    
+      <div class="divider"></div>
+      <div class="row">
+        <div class="col s4">
+          <!-- Promo Content 1 goes here -->
+        </div>
+        <div class="col s4">
+          <!-- Promo Content 2 goes here -->
+        </div>
+        <div class="col s4">
+          <!-- Promo Content 3 goes here -->
+        </div>
+      </div>
     </div>
     <footer class="page-footer">
       <div class="container">
@@ -212,7 +265,7 @@
       </div>
       <div class="footer-copyright">
           <div class="container">
-          © 2014 Copyright Text
+          © 2022 Copyright Text
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
           </div>
       </div>
