@@ -1,5 +1,4 @@
-/*
-$("input[data-type='currency']").on({
+/*$("input[data-type='currency']").on({
     keyup: function() {
       formatCurrency($(this));
     },
@@ -8,28 +7,29 @@ $("input[data-type='currency']").on({
     }
   });*/
 
-var elem = document.getElementsByTagName("input[data-type='currency']").onkeyup.function({
-    formatCurrency($(this));
-});
+const inputMonto = document.getElementById("monto");
+
+inputMonto.addEventListener('keyup', formatCurrency(this));
+inputMonto.addEventListener('blur', formatCurrency(this, "blur"));
 
 function formatNumber(n) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
-
 function formatCurrency(input, blur) {
   // appends $ to value, validates decimal side
   // and puts cursor back in right position.
-  
+  console.log("Comienza...");
+  console.log("input: " + input.value)
   // get input value
-  var input_val = input.val();
-  
+  let input_val = input.value;
+  console.log(input_val);
   // don't validate empty input
-  if (input_val === "") { return; }
+  if (input_val === "" | undefined) { return; }
   
   // original length
-  var original_len = input_val.length;
+  let original_len = input_val.length;
 
   // initial caret position 
   var caret_pos = input.prop("selectionStart");
