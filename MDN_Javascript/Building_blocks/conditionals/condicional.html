@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construyendo bloques - Condicionales</title>
+</head>
+<body>
+    <div>
+        <label for="temperature">Temperatura:</label>
+        <input type="number" name="temperature" id="temperature" value="86">
+        <label for="weather">Seleccione un tipo de clima para hoy:</label>
+        <select name="weather" id="weather">
+            <option value="">---Seleccione una opción---</option>
+            <option value="sunny">Soleado</option>
+            <option value="rainy">Lluvioso</option>
+            <option value="snowing">Nevando</option>
+            <option value="overcast">Nublado</option>
+        </select>
+        <p></p>
+    </div>
+    <div>
+        <p>ejemplo utilizndo switch</p>
+        <label for="weather2">Seleccione un tipo de clima para hoy:</label>
+        <select name="weather2" id="weather2">
+            <option value="">---Seleccione una opción---</option>
+            <option value="sunny">Soleado</option>
+            <option value="rainy">Lluvioso</option>
+            <option value="snowing">Nevando</option>
+            <option value="overcast">Nublado</option>
+        </select>
+        <p id="para2"></p>
+    </div>
+    <div id="html">
+        <p>Ejemplo operador ternario</p>
+        <label for="theme">Selecciona un tema:</label>
+        <select name="theme" id="theme">
+            <option value="white">Blanco</option>
+            <option value="black">Negro</option>
+        </select>
+    </div>
+
+    <script>
+        const select = document.querySelector('select');
+        const select2 = document.querySelector('#weather2');
+        const theme = document.querySelector('#theme');
+        const html = document.querySelector('#html');
+        const temp = document.querySelector('input');
+        const para = document.querySelector('p');
+        const para2 = document.querySelector('#para2');
+
+        select.addEventListener('change', setWeather);
+        select2.addEventListener('change', setWeather2);
+
+        html.style.padding = '10px';
+
+        theme.addEventListener(
+            'change', 
+            () => (theme.value === 'black') ? update('black', 'white') : update('white', 'black')
+        );
+
+        function setWeather()
+        {
+            const choice = select.value;
+            const temperature = temp.value;
+
+            if (choice === 'sunny')
+            {
+                if (temperature < 86)
+                {
+                    para.textContent = `Está a ${temperature} grados fuera — bonito y soleado. Vaya a la playa, o al parque, y por un helado.`;
+                }
+                else
+                {
+                    para.textContent = `Está a ${temperature} grados afuera — ¡REALMENTE CALIENTE! Si deseas ir afuera, asegúrate de aplicarte algún protector solar.`;
+                }
+                
+            }
+            else if (choice === 'rainy' && temperature < 86 )
+            {
+                para.textContent = `Hay ${temperature} grados y la lluvia está cayendo afuera; está fresco, tome un impermeable y un paraguas, y no esté fuera demasiado tiempo.`;
+            }
+            else if (choice === 'rainy' && temperature >= 86 )
+            {
+                para.textContent = `Hay ${temperature} grados y la lluvia está cayendo afuera; hay mucha humedad y un ambiente sofocante, tome un impermeable y un paraguas, y no esté fuera demasiado tiempo.`;
+            }
+            else if (choice === 'snowing')
+            {
+                para.textContent = '¡La nieve cae — esta congelando! Mejor permanezca dentro con una taza de chocolate caliente, o vaya y construya un muñeco de nueve.';
+            }
+            else if (choice === 'overcast')
+            {
+                para.textContent = 'No está lloviendo, pero el cielo es gris y sombrío; podría cambiar en cualquier moento, así que tenga un impermeable a mano.';
+            }
+            else
+            {
+                para.textContent = '';
+            }
+        }
+
+        function setWeather2()
+        {
+            const choice = select2.value;
+
+            switch (choice)
+            {
+                case 'sunny':
+                    para2.textContent = 'Está bonito y soleado. Vaya a la playa, o al parque, y por un helado.'
+                    break;
+                
+                case 'rainy':
+                    para2.textContent = 'La lluvia está cayendo afuera; está fresco, tome un impermeable y un paraguas, y no esté fuera demasiado tiempo.';
+                    break;
+                
+                case 'snowing':
+                    para2.textContent = '¡La nieve cae — esta congelando! Mejor permanezca dentro con una taza de chocolate caliente, o vaya y construya un muñeco de nueve.';
+                    break;
+
+                case 'overcast':
+                    para2.textContent = 'No está lloviendo, pero el cielo es gris y sombrío; podría cambiar en cualquier moento, así que tenga un impermeable a mano.';
+                    break;
+
+                default:   
+                    para2.textContent = '';
+            }
+        }
+
+        function update(bgcolor, textColor)
+        {
+            html.style.backgroundColor = bgcolor;
+            html.style.color = textColor;
+        }
+    </script>
+</body>
+</html>
