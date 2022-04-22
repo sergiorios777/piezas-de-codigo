@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,55 +8,55 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Icons Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Hoja de estilos propio -->
+    <link rel="stylesheet" href="estilos.css">
 
 </head>
 <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">ABZ Store</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
     <div class="container">
-        <nav>
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">ABZ Store</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="badges.html">Components</a></li>
-              <li><a href="collapsible.html">Javascript</a></li>
-              <li><a href="mobile.html">Mobile</a></li>
-            </ul>
-          </div>
-        </nav>
-        
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
-
         <div class="row">
-            <div class="card">
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-tabs">
-                  <ul class="tabs tabs-fixed-width">
-                    <li class="tab"><a href="#test4">Test 1</a></li>
-                    <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-                    <li class="tab"><a href="#test6">Test 3</a></li>
-                  </ul>
-                </div>
-                <div class="card-content grey lighten-4">
-                  <div id="test4">Test 1</div>
-                  <div id="test5">Test 2</div>
-                  <div id="test6">Test 3</div>
-                </div>
+          <div class="col s12 m12 l12">
+            <div class="micaja blue-grey darken-1">
+              <div class="white-text">
+                <span class="micaja-titulo">Registro de gastos y ventas</span>
+                <p>Puede registrar los gastos y ventas realizados, en las secciones correspondientes.
+                  Se pueden observar las últimas cinco operaciones de cada una de ellas en los cuadros de abajo.</p>
+              </div>
+              <div class="micaja-accion">
+                <a href="#">Registrar gastos</a>
+                <a href="#">Registrar ventas</a>
+              </div>
             </div>
+          </div>
         </div>
-
+        <div class="divider"></div>
         <div class="row">
-            <div class="s12 l6">
+            <div class="col s12 m12 l10 offset-l1">
               <table class="highlight">
-                <caption>Gastos</caption> 
+                <caption class="red-text text-darken-1">Gastos <br>
+                  <span>El cuadro muestra los últimos cinco registros de gastos.</span>
+                </caption> 
                 <thead>
                   <tr>
                     <th>Fecha</th>
@@ -99,41 +99,131 @@
               <a href="#!">Ver todos los gastos</a>
             </div>
         </div>
-        <div id="modal1" class="modal">
+        <div class="row">
+          <div class="col s12 m12 l10 offset-l1">
+            <table class="highlight">
+              <caption class="blue-text text-darken-3">Ventas <br>
+                <span>El cuadro muestra los últimos cinco registros de ventas.</span>
+              </caption> 
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th class="hide-on-small-only">DNI/RUC</th>
+                  <th>Cliente</th>
+                  <th class="hide-on-med-and-down">Detalle</th>
+                  <th colspan="2">Venta S/</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>11/03/2022</td>
+                  <td class="hide-on-small-only">-</td>
+                  <td>Martha Phillips</td>
+                  <td class="hide-on-med-and-down">Venta de una cartera de mujer.</td>
+                  <td>188.00</td>
+                  <td>
+                    <a href="#modal2" class="modal-trigger"><i class="material-icons">search</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11/03/2022</td>
+                  <td class="hide-on-small-only">-</td>
+                  <td>Perico Palotes</td>
+                  <td class="hide-on-med-and-down">Venta de un par de zapatos de hombre.</td>
+                  <td>280.00</td>
+                  <td><span><i class="material-icons">search</i></span></td>
+                </tr>
+                <tr>
+                  <td>09/03/2022</td>
+                  <td class="hide-on-small-only">10052638911</td>
+                  <td>Federico Morante</td>
+                  <td class="hide-on-med-and-down">Venta de un blazer de hombre.</td>
+                  <td>256.00</td>
+                  <td><span><i class="material-icons">search</i></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#!">Ver todas las ventas</a>
+          </div>
+      </div>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <table>
+            <caption>Detalles del gasto:</caption>
+            <tr>
+              <th scope="row">Fecha:</th>
+              <td>11/03/2022</td>
+            </tr>
+            <tr>
+              <th scope="row">RUC:</th>
+              <td>20506689514</td>
+            </tr>
+            <tr>
+              <th scope="row">Proveedor:</th>
+              <td>Axel Import ERIL</td>
+            </tr>
+            <tr>
+              <th scope="row">Detalle:</th>
+              <td>Por la compra de 27 carteras variadas.</td>
+            </tr>
+            <tr>
+              <th scope="row">Comprobante Nº:</th>
+              <td>FACT. F023-11517</td>
+            </tr>
+            <tr>
+              <th scope="row">Monto S/:</th>
+              <td>1,810.17</td>
+            </tr>
+            <tr>
+              <th scope="row">IGV S/:</th>
+              <td>325.83</td>
+            </tr>
+            <tr>
+              <th scope="row">Monto total S/:</th>
+              <td>2,136.00</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+      </div>
+        <div id="modal2" class="modal">
           <div class="modal-content">
             <table>
-              <caption>Gasto:</caption>
+              <caption>Detalles de la venta:</caption>
               <tr>
                 <th scope="row">Fecha:</th>
                 <td>11/03/2022</td>
               </tr>
               <tr>
-                <th scope="row">RUC:</th>
-                <td>20506689514</td>
+                <th scope="row">DNI/RUC:</th>
+                <td>-</td>
               </tr>
               <tr>
-                <th scope="row">Proveedor:</th>
-                <td>Axel Import ERIL</td>
+                <th scope="row">Cliente:</th>
+                <td>Martha Phillips</td>
               </tr>
               <tr>
                 <th scope="row">Detalle:</th>
-                <td>Por la compra de 27 carteras variadas.</td>
+                <td>Venta de una cartera de mujer.</td>
               </tr>
               <tr>
-                <th scope="row">Factura Nº:</th>
-                <td>FE020-25163</td>
+                <th scope="row">Comprobante Nº:</th>
+                <td>BV023-17</td>
               </tr>
               <tr>
                 <th scope="row">Monto S/:</th>
-                <td>1,810.17</td>
+                <td>159.32</td>
               </tr>
               <tr>
                 <th scope="row">IGV S/:</th>
-                <td>325.83</td>
+                <td>28.68</td>
               </tr>
               <tr>
                 <th scope="row">Monto total S/:</th>
-                <td>2,136.00</td>
+                <td>188.00</td>
               </tr>
             </table>
           </div>
@@ -141,32 +231,45 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
           </div>
         </div>
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
-            </div>
-        </footer>
+    
+      <div class="divider"></div>
+      <div class="row">
+        <div class="col s4">
+          <!-- Promo Content 1 goes here -->
+        </div>
+        <div class="col s4">
+          <!-- Promo Content 2 goes here -->
+        </div>
+        <div class="col s4">
+          <!-- Promo Content 3 goes here -->
+        </div>
+      </div>
     </div>
+    <footer class="page-footer">
+      <div class="container">
+          <div class="row">
+          <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+          </div>
+          </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+          © 2022 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+      </div>
+    </footer>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
